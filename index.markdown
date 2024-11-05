@@ -1,6 +1,14 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
+title: Home
 ---
+
+# Bienvenido a mi Blog
+
+¡Hola! Este es mi blog donde hablo sobre temas interesantes y comparto mis pensamientos.
+
+## Últimas Publicaciones
+
+{% for post in site.posts %}
+  * [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%Y-%m-%d" }}
+{% endfor %}
